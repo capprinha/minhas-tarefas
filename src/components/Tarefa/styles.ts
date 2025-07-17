@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import variaveis from "../../styles/variaveis";
-
+import {Botao} from '../../styles/index'
 import * as enums from '../../utils/enunms/Tarefa'
 
 type TagProps = {
@@ -25,12 +25,18 @@ export const Card = styled.div`
   padding:  16px;
   margin-bottom: 32px;
   border-radius: 16px;
+
+  label{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
 `
 
 export const Titulo = styled.h3`
   font-weight: bold;
   font-size: 18px;
-  margin-bottom: 16px;
+  margin-left: 8px;
 `
 
 export const Tag = styled.span<TagProps>`
@@ -63,21 +69,6 @@ export const BarraAcoes = styled.div`
   padding-top: 16px;
 `
 
-export const Botao = styled.button`
-  font-size: 12px;
-  font-weight: bold;
-  color: #fff;
-  padding: 8px 12px;
-  border: none;
-  cursor: pointer;
-  background-color: #2F3640;
-  border-radius: 8px;
-  margin-right: 8px;
-`
-
-export const BotaoSalvar = styled(Botao)`
-  background-color: ${variaveis.verde};
-`
 export const BotaoCancelarRemover = styled(Botao)`
   background-color: ${variaveis.vermelho};
 `
